@@ -4,15 +4,8 @@ package calculator;
 
 option go_package= "github.com/dangquyitt/go-learn-grpc/calculator/proto";
 
-message CalculatorRequest {
-    int32 a = 1;
-    int32 b = 2;
-}
-
-message CalculatorResponse {
-    int32 sum = 1;
-}
+import "sum.proto";
 
 service CalculatorService {
-    rpc Calculate(CalculatorRequest) returns (CalculatorResponse);
+    rpc Sum(SumRequest) returns (SumResponse);
 }
