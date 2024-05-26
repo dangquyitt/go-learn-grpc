@@ -31,6 +31,4 @@ func (s *Server) GreetEveryone(stream pb.GreetService_GreetEveryoneServer) error
 			log.Fatalf("Error while sending data to client: %v\n", err)
 		}
 	}
-
-	return nil
 }
