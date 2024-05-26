@@ -26,9 +26,10 @@ func doSqrt(c pb.CalculatorServiceClient, n int32) {
 
 		if e.Code() == codes.InvalidArgument {
 			log.Println("We probaly sent a negative number")
+			return
 		}
 
-		return
+		log.Fatalf("Unexpected gRPC error: %v\n", err)
 	}
 
 	log.Printf("Sqrt: %v\n", res.Result)
