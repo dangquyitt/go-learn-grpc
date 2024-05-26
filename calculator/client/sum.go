@@ -15,7 +15,7 @@ func doSum(c pb.CalculatorServiceClient) {
 		B: rand.Int31n(100),
 	})
 	if err != nil {
-		log.Fatalf("Could not greet: %v\n", err)
+		log.Fatalf("Error while calling sum: %v\n", err)
 	}
 	log.Printf("Sum: %v\n", res.Result)
 }

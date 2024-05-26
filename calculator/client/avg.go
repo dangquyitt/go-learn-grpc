@@ -23,7 +23,7 @@ func doAvg(c pb.CalculatorServiceClient) {
 	}
 
 	if err != nil {
-		log.Fatalf("Could not greet: %v\n", err)
+		log.Fatalf("Error while calling avg: %v\n", err)
 	}
 
 	for _, req := range reqs {
